@@ -112,14 +112,16 @@ if __name__ == "__main__":
 	startTime = currentTimeNanos()
 	print(solusiGreedyBestFirstSearch(width, height, copy.deepcopy(board), startCoord, goalCoord))
 	endTime = currentTimeNanos()
-	print("GBFS time elaps:", endTime - startTime, "ms")
+	print("GBFS time elaps:", endTime - startTime, "ns")
 	print("Memory usage:", tracemalloc.get_traced_memory())
 	tracemalloc.stop()
+
+	print()
 
 	tracemalloc.start()
 	startTime = currentTimeNanos()
 	print(solusiAStar(width, height, copy.deepcopy(board), startCoord, goalCoord))
 	endTime = currentTimeNanos()
-	print("AStar time elaps:", endTime - startTime, "ms")
+	print("AStar time elaps:", endTime - startTime, "ns")
 	print("Memory usage:", tracemalloc.get_traced_memory())
 	tracemalloc.stop()
